@@ -1,0 +1,68 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  background: url("assets/main.png");
+  display: flex;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+}
+.page .page__wall {
+  background: url("assets/wall.png");
+  bottom: 304px;
+  height: 548px;
+  left: 318px;
+  position: absolute;
+  width: 248px;
+}
+.page .page__forklift {
+  background: url("assets/forklift.png");
+  bottom: 304px;
+  height: 172px;
+  left: 318px;
+  position: absolute;
+  width: 276px;
+}
+.page .page__package {
+  background: url("assets/package.png");
+  bottom: 657px;
+  height: 148px;
+  left: 318px;
+  position: absolute;
+  width: 72px;
+}
+.page .page__truck {
+  background: url("assets/truck.png");
+  bottom: 244px;
+  height: 238px;
+  right: 315px;
+  position: absolute;
+  width: 312px;
+}
+.page .page__contract {
+  background: url("assets/contract.png");
+  bottom: 567px;
+  height: 132px;
+  left: 345px;
+  position: absolute;
+  width: 96px;
+  animation-name: contractMove;
+  animation-duration: 2s;
+}
+
+@keyframes contractMove {
+  from {
+    bottom: 567px;
+  }
+  to {
+    bottom: 367px;
+  }
+}
+
+/*# sourceMappingURL=css.css.map */
