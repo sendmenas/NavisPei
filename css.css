@@ -15,35 +15,131 @@ body, html {
 }
 .page .page__wall {
   background: url("assets/wall.png");
-  bottom: 304px;
+  bottom: 294px;
   height: 548px;
-  left: 318px;
+  left: 319px;
   position: absolute;
   width: 248px;
 }
-.page .page__forklift {
-  background: url("assets/forklift.png");
-  bottom: 304px;
-  height: 172px;
+.page .page__girder {
+  background: url("assets/girder.png");
+  bottom: 297px;
+  height: 389px;
+  left: 649px;
+  position: absolute;
+  width: 26px;
+}
+.page .page__track {
+  background: url("assets/track.png");
+  bottom: 657px;
+  height: 26px;
+  left: 487px;
+  position: absolute;
+  width: 187px;
+}
+.page .page__track .page__track__container {
+  height: 10px;
+  position: absolute;
+  top: 0;
+  width: 187px;
+}
+.page .page__track .page__track__container .page__track__container__line {
+  animation: trackLineMove infinite 1s linear;
+  background: url("assets/track_base.png");
+  height: 10px;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+.page .page__track .page__track__wheel {
+  animation-name: rotateWheelForward;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background: url("assets/track_wheel.png");
+  bottom: 2px;
+  height: 13px;
+  position: absolute;
+  width: 13px;
+}
+.page .page__track .page__track__wheel--one {
+  left: 10px;
+}
+.page .page__track .page__track__wheel--two {
+  left: 75px;
+}
+.page .page__track .page__track__wheel--three {
+  left: 140px;
+}
+.page .page__lift {
+  background: url("assets/lift.png");
+  bottom: 311px;
+  height: 163px;
   left: 318px;
   position: absolute;
-  width: 276px;
+  width: 182px;
+}
+.page .page__lift .page__lift__fork {
+  background: url("assets/fork.png");
+  bottom: 0;
+  height: 76px;
+  position: absolute;
+  right: -96px;
+  width: 98px;
+}
+.page .page__lift .page__lift__wheel {
+  background: url("assets/lift_wheel.png");
+  height: 44px;
+  width: 44px;
+}
+.page .page__lift .page__lift__wheel--left {
+  bottom: -14px;
+  left: 4px;
+  position: absolute;
+}
+.page .page__lift .page__lift__wheel--right {
+  bottom: -14px;
+  right: 10px;
+  position: absolute;
+}
+.page .page__rack {
+  background: url("assets/rack.png");
+  bottom: 672px;
+  height: 10px;
+  left: 671px;
+  position: absolute;
+  width: 87px;
 }
 .page .page__package {
   background: url("assets/package.png");
-  bottom: 657px;
+  bottom: 666px;
   height: 148px;
   left: 318px;
   position: absolute;
   width: 72px;
 }
 .page .page__truck {
-  background: url("assets/truck.png");
-  bottom: 244px;
-  height: 238px;
+  background: url("assets/truck_body.png");
+  bottom: 264px;
+  height: 210px;
   right: 315px;
   position: absolute;
   width: 312px;
+}
+.page .page__truck .page__truck__wheel {
+  background: url("assets/truck_wheel.png");
+  height: 49px;
+  width: 49px;
+}
+.page .page__truck .page__truck__wheel--left {
+  bottom: -22px;
+  left: 32px;
+  position: absolute;
+}
+.page .page__truck .page__truck__wheel--right {
+  bottom: -22px;
+  right: 54px;
+  position: absolute;
 }
 .page .page__contract {
   background: url("assets/contract.png");
@@ -56,12 +152,50 @@ body, html {
   animation-duration: 2s;
 }
 
+.rotateMachineWheelForward {
+  animation-name: rotateWheelForward;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.rotateMachineWheelBackwards {
+  animation-name: rotateWheelBackwards;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 @keyframes contractMove {
-  from {
+  0% {
     bottom: 567px;
   }
-  to {
+  100% {
     bottom: 367px;
+  }
+}
+@keyframes rotateWheelForward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateWheelBackwards {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes trackLineMove {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(5px);
   }
 }
 
