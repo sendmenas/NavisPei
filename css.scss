@@ -22,8 +22,8 @@ body, html {
 	}
 	.page__girder {
 		background: url('assets/girder.png');
-		bottom: 297px;
-		height: 389px;
+		bottom: 298px;
+		height: 390px;
 		left: 649px;
 		position: absolute;
 		width: 26px;
@@ -31,10 +31,10 @@ body, html {
 	.page__track {
 		background: url('assets/track.png');
 		bottom: 657px;
-		height: 26px;
-		left: 487px;
+		height: 24px;
+		left: 483px;
 		position: absolute;
-		width: 187px;
+		width: 183px;
 		.page__track__container {
 			height: 10px;
 			position: absolute;
@@ -43,10 +43,10 @@ body, html {
 			.page__track__container__line {
 				animation: trackLineMove infinite 1s linear;
 				background: url('assets/track_base.png');
-				height: 10px;
+				height: 8px;
 				position: absolute;
 				top: 0;
-				width: 9px;
+				width: 8px;
 			}
 		}
 		.page__track__wheel {
@@ -56,9 +56,9 @@ body, html {
 			animation-timing-function: linear;
 			background: url('assets/track_wheel.png');
 			bottom: 2px;
-			height: 13px;
+			height: 12px;
 			position: absolute;
-			width: 13px;
+			width: 12px;
 		}
 		.page__track__wheel--one {
 			left: 10px;
@@ -104,7 +104,7 @@ body, html {
 	.page__rack {
 		background: url('assets/rack.png');
 		bottom: 672px;
-		height: 10px;
+		height: 8px;
 		left: 671px;
 		position: absolute;
 		width: 87px;		
