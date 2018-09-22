@@ -2,10 +2,10 @@ class Movement {
 	constructor() {
 		this.package = document.getElementsByClassName("page__package")[0];
 		this.rack = document.getElementsByClassName("page__rack")[0];
-		this.trackLines = document.getElementsByClassName("page__track__container__line");
+		this.trackLines = document.getElementsByClassName("page__track-container__line");
 		this.lift = document.getElementsByClassName("page__lift")[0];
 		this.fork = document.getElementsByClassName("page__lift__fork")[0];
-		this.forkliftWheels = document.getElementsByClassName("page__lift__wheel");
+		this.forkliftWheels = document.getElementsByClassName("wheel-rotation");
 		this.truckWheels = document.getElementsByClassName("page__truck__wheel");
 		this.truck = document.getElementsByClassName("page__truck")[0];
 		this.page = document.getElementsByClassName("page")[0];
@@ -27,11 +27,11 @@ class Movement {
 	}
 
 	startConveyor() {
-		let packageInitialLeftOffset = 318;
-		for (let i = 1; i < 348; i++) {
+		let packageInitialLeftOffset = 420;
+		for (let i = 1; i < 255; i++) {
 			setTimeout(() => {
 				this.package.setAttribute("style", "left:" + (packageInitialLeftOffset + i) + "px");
-				if (i == 347) {
+				if (i == 254) {
 					this.lowerPackage();
 				}
 			}, 5*i);
@@ -39,12 +39,12 @@ class Movement {
 	}
 
 	lowerPackage() {
-		let packageInitialBottomOffset = 666;
-		let rackInitialBottomOffset = 672;
+		let packageInitialBottomOffset = 846;
+		let rackInitialBottomOffset = 845;
 		for (let i = 1; i < 375; i++) {
 			setTimeout(() => {
-				this.package.setAttribute("style", "left: 665px; bottom:" + (packageInitialBottomOffset - i) + "px");
-				this.rack.setAttribute("style", "left: 671px; bottom:" + (rackInitialBottomOffset - i) + "px");
+				this.package.setAttribute("style", "left: 674px; bottom:" + (packageInitialBottomOffset - i) + "px");
+				this.rack.setAttribute("style", "bottom:" + (rackInitialBottomOffset - i) + "px");
 				if (i == 374) {
 					this.startForklift();
 				}
@@ -53,16 +53,16 @@ class Movement {
 	}
 
 	startForklift() {
-		let forkliftInitialLeftOffset = 318;
+		let forkliftInitialLeftOffset = 275;
 
 		for (let i = 0; i < this.forkliftWheels.length; i++) {
   			this.forkliftWheels[i].classList.add("rotateMachineWheelForward");
 		}
 
-		for (let i = 1; i < 153; i++) {
+		for (let i = 1; i < 191; i++) {
 			setTimeout(() => {
 				this.lift.setAttribute("style", "left:" + (forkliftInitialLeftOffset + i) + "px");
-				if (i == 152) {
+				if (i == 190) {
 					for (let i = 0; i < this.forkliftWheels.length; i++) {
 			  			this.forkliftWheels[i].classList.remove("rotateMachineWheelForward");
 					}
@@ -73,11 +73,11 @@ class Movement {
 	}
 
 	grabPackage() {
-		let packageInitialBottomOffset = 292;
+		let packageInitialBottomOffset = 472;
 		let forkInitialBottomOffset = 0;
 		for (let i = 1; i < 21; i++) {
 			setTimeout(() => {
-				this.package.setAttribute("style", "left: 665px; bottom:" + (packageInitialBottomOffset + i) + "px");
+				this.package.setAttribute("style", "left: 674px; bottom:" + (packageInitialBottomOffset + i) + "px");
 				this.fork.setAttribute("style", "bottom:" + (forkInitialBottomOffset + i) + "px");
 				if (i == 20) {
 					this.movePackageToTruck();
@@ -88,16 +88,16 @@ class Movement {
 	}
 
 	movePackageToTruck() {
-		let forkliftLeftOffset = 470;
-		let packageleftOffset = 665;
-		let packageInitialBottomOffset = 312;
+		let forkliftLeftOffset = 465;
+		let packageleftOffset = 674;
+		let packageInitialBottomOffset = 492;
 		let forkInitialBottomOffset = 20;
-		let rackInitialBottomOffset = 298;
+		let rackInitialBottomOffset = 471;
 
 		setTimeout(() => {
 			for (let i = 1; i < 375; i++) {
 				setTimeout(() => {
-					this.rack.setAttribute("style", "left: 671px; bottom:" + (rackInitialBottomOffset + i) + "px");
+					this.rack.setAttribute("style", "bottom:" + (rackInitialBottomOffset + i) + "px");
 					if (i == 374) {
 						this.rack.removeAttribute("style");
 					}
@@ -112,7 +112,7 @@ class Movement {
 		for (let i = 1; i < 636; i++) {
 			setTimeout(() => {
 				this.lift.setAttribute("style", "left:" + (forkliftLeftOffset + i) + "px");
-				this.package.setAttribute("style", "left:" + (packageleftOffset + i) + "px; bottom: 312px;");
+				this.package.setAttribute("style", "left:" + (packageleftOffset + i) + "px; bottom: 492px;");
 				if (i == 635) {
 					for (let i = 0; i < this.forkliftWheels.length; i++) {
 			  			this.forkliftWheels[i].classList.remove("rotateMachineWheelForward");
@@ -131,8 +131,8 @@ class Movement {
 	}
 
 	sendTruck() {
-		let truckInitialRightOffset = 315;
-		let forkliftLeftOffset = 1105;
+		let truckInitialRightOffset = 220;
+		let forkliftLeftOffset = 1100;
 		// let packageleftOffset = 1300;
 
 		this.package.removeAttribute("style");
@@ -149,10 +149,10 @@ class Movement {
 		for (let i = 0; i < this.forkliftWheels.length; i++) {
   			this.forkliftWheels[i].classList.add("rotateMachineWheelBackwards");
 		}
-		for (let j = 1; j < 788; j++) {
+		for (let j = 1; j < 826; j++) {
 			setTimeout(() => {
 				this.lift.setAttribute("style", "left:" + (forkliftLeftOffset - j) + "px");
-				if (j == 787) {
+				if (j == 825) {
 					for (let i = 0; i < this.forkliftWheels.length; i++) {
 			  			this.forkliftWheels[i].classList.remove("rotateMachineWheelBackwards");
 					}

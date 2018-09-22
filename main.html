@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="bootstrap/css/product.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      window.onload = function() {
+          let start = new Movement();
+          start.init();
+        };
+    </script>
 
     <title>Hello, world!</title>
   </head>
@@ -30,7 +38,36 @@
     </nav>
 
     <div class="position-relative overflow-hidden navis">
-   
+      <main class="page">
+        <div class="page__track-container">
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__line"></div>
+          <div class="page__track-container__wheel page__track-container__wheel--two"></div>
+          <div class="page__track-container__wheel page__track-container__wheel--three"></div>
+          <div class="page__track-container__wheel page__track-container__wheel--one"></div>
+        </div>
+        <div class="page__rack"></div>
+        <div class="page__package"></div>
+        <div class="page__lift">
+          <div class="page__lift__fork"></div>
+          <div class="wheel-rotation page__lift__wheel-left"></div>
+          <div class="wheel-rotation page__lift__wheel-right"></div>
+        </div>
+        <div class="page__wall"></div>
+        <div class="page__girder"></div>
+        <div class="page__truck">
+          <div class="page__truck__wheel page__truck__wheel--left"></div>
+          <div class="page__truck__wheel page__truck__wheel--right"></div>
+        </div>
+      </main>
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
