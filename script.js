@@ -12,13 +12,24 @@ class Movement {
 	}
 	
 	init() {
-		let contract = document.createElement("div");
-		contract.className = "page__contract";
-		this.page.appendChild(contract);
+		let customer = document.createElement("div");
+		customer.className = "page__customer";
+		this.page.appendChild(customer);
 		setTimeout(() => {
-			this.page.removeChild(contract);
-			this.startConveyor();
-		}, 2000);
+			let contract = document.createElement("div");
+			contract.className = "page__contract";
+			this.page.appendChild(contract);
+			setTimeout(() => {
+				customer.classList.add("page__customer--disapear");
+				setTimeout(() => {
+					this.page.removeChild(customer);
+				}, 590);
+			}, 1000);
+			setTimeout(() => {
+				this.page.removeChild(contract);
+				this.startConveyor();
+			}, 2000);
+		}, 1000);
 
 
 		for (let i = 0; i < this.trackLines.length; i++) {
