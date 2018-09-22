@@ -103,7 +103,7 @@ class Movement {
 					}
 				}, 5*i);
 			}			
-		}, 300);
+		}, 2000);
 
 		for (let i = 0; i < this.forkliftWheels.length; i++) {
   			this.forkliftWheels[i].classList.add("rotateMachineWheelForward");
