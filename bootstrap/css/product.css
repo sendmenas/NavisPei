@@ -7,19 +7,28 @@
  */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(255, 255, 255, 1);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color: #999;
-  transition: ease-in-out color .15s;
+	color: #333;
+	transition: ease-in-out color .15s;
+	line-height: 46px;
 }
 .site-header a:hover {
-  color: #fff;
+  color: #83ac83;
   text-decoration: none;
 }
 
+nav.site-header { height: 80px; align-items: center; display: flex;}
+
+.filler {
+	height: 160px;
+	background: url("../../assets/front_wall_repeat.png") repeat-x left bottom #eee8e2;
+	
+	
+}
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
@@ -74,3 +83,5 @@
 .overflow-hidden { overflow: hidden; }
 
 .navis { width: 100%; min-width: 1903px; height: 668px; background: url("../../assets/main.png"); padding: 0px; margin: 0px;}
+
+.background-color: rgba(255, 255, 255, 1);
