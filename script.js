@@ -45,7 +45,7 @@ class Movement {
 				if (i == 254) {
 					this.lowerPackage();
 				}
-			}, 5*i);
+			}, 15*i);
 		}		
 	}
 
@@ -144,7 +144,6 @@ class Movement {
 	sendTruck() {
 		let truckInitialRightOffset = 220;
 		let forkliftLeftOffset = 1100;
-		// let packageleftOffset = 1300;
 
 		this.package.removeAttribute("style");
 
@@ -152,7 +151,7 @@ class Movement {
   			this.truckWheels[i].classList.add("rotateMachineWheelForward");
 		}
 
-		for (let i = 1; i < 800; i++) {
+		for (let i = 1; i < 801; i++) {
 			setTimeout(() => {
 				this.truck.setAttribute("style", "right:" + (truckInitialRightOffset - i) + "px");
 			}, 5*i);
@@ -167,8 +166,28 @@ class Movement {
 					for (let i = 0; i < this.forkliftWheels.length; i++) {
 			  			this.forkliftWheels[i].classList.remove("rotateMachineWheelBackwards");
 					}
+					this.returnTruck();
 				}
 			}, 5*j);
+		}
+	}
+
+	returnTruck() {
+		let truckInitialRightOffset = -579;
+		for (let i = 0; i < this.truckWheels.length; i++) {
+			this.truckWheels[i].classList.remove("rotateMachineWheelForward");
+  			this.truckWheels[i].classList.add("rotateMachineWheelBackwards");
+		}
+		for (let i = 1; i < 801; i++) {
+			setTimeout(() => {
+				this.truck.setAttribute("style", "right:" + (truckInitialRightOffset + i) + "px");
+				if (i == 800) {
+					for (let i = 0; i < this.truckWheels.length; i++) {
+			  			this.truckWheels[i].classList.remove("rotateMachineWheelBackwards");
+					}					
+				this.init();
+				}
+			}, 5*i);
 		}
 	}
 }
