@@ -10,6 +10,7 @@
   background-color: rgba(255, 255, 255, 1);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0px 6px 8px #888888;
 }
 .site-header a {
 	color: #333;
@@ -24,8 +25,11 @@
 nav.site-header { height: 80px; align-items: center; display: flex;}
 
 .filler {
-	height: 160px;
+	height: 122px;
 	background: url("../../assets/front_wall_repeat.png") repeat-x left bottom #eee8e2;
+	box-shadow: 0px 5px 8px #666666;
+    z-index: 100;
+    position: sticky;
 	
 	
 }
