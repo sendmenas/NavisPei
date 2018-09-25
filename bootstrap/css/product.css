@@ -42,6 +42,25 @@ align-content: center;
 	
 	
 }
+
+.kontaktai {background: #cdddcd; position: relative; overflow-x: hidden;     color: #ffffff;
+    background-image: linear-gradient(135deg, #364248, #9aa0a3);}
+.kontaktai svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+/*.paslaugos {background-image: url(../../assets/papper2.jpg );}*/
+.paslaugos {background: #EEE8E2;}
+
+.bg-light-other {
+    background-color: #EEE8E2!important;
+}
+.bg-light-rose {
+    background-color: #ebf2df!important;
+}
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
@@ -95,6 +114,6 @@ align-content: center;
 
 .overflow-hidden { overflow: hidden; }
 
-.navis { width: 100%; min-width: 1903px; height: 668px; background: url("../../assets/main.png"); padding: 0px; margin: 0px;}
+.navis { width: 100%; min-width: 100%; height: 668px; background: url("../../assets/main.png"); padding: 0px; margin: 0px;}
 
 .background-color: rgba(255, 255, 255, 1);

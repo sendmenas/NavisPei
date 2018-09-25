@@ -45,7 +45,7 @@ class Movement {
 				if (i == 254) {
 					this.lowerPackage();
 				}
-			}, 15*i);
+			}, 10*i);
 		}		
 	}
 
@@ -137,7 +137,7 @@ class Movement {
 						}, 50*i);
 					};
 				}
-			}, 5*i);
+			}, 3*i);
 		}
 	}
 
@@ -154,7 +154,7 @@ class Movement {
 		for (let i = 1; i < 801; i++) {
 			setTimeout(() => {
 				this.truck.setAttribute("style", "right:" + (truckInitialRightOffset - i) + "px");
-			}, 5*i);
+			}, 3*i);
 		}
 		for (let i = 0; i < this.forkliftWheels.length; i++) {
   			this.forkliftWheels[i].classList.add("rotateMachineWheelBackwards");
