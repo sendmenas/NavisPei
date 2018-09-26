@@ -43,8 +43,8 @@ align-content: center;
 	
 }
 
-.kontaktai {background: #cdddcd; position: relative; overflow-x: hidden;     color: #ffffff;
-    background-image: linear-gradient(135deg, #364248, #9aa0a3);}
+.kontaktai {/*background: #cdddcd; position: relative; overflow-x: hidden;     color: #ffffff;
+    background-image: linear-gradient(180deg, #74A274, #74A274);*/}
 .kontaktai svg {
   position: absolute;
   bottom: 0;
@@ -59,7 +59,40 @@ align-content: center;
     background-color: #EEE8E2!important;
 }
 .bg-light-rose {
-    background-color: #ebf2df!important;
+    background-color: #f7f5f2!important;
+}
+.front_wheel {
+	position: absolute;
+	bottom: 24px;
+	right: 283px;
+	  animation-name: rotateWheelForward;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.back_wheel {
+	position: absolute;
+	bottom: 24px;
+	right: 524px;
+	  animation-name: rotateWheelForward;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#animate-area {
+    background-image: url(../../assets/forest.png);
+	background-color: #cccccc;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 8s linear infinite;
+    -ms-animation: animatedBackground 8s linear infinite;
+    -moz-animation: animatedBackground 8s linear infinite;
+    -webkit-animation: animatedBackground 8s linear infinite;
+	animation-direction: reverse;
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 /*
  * Dummy devices (replace them with your own or something else entirely!)
