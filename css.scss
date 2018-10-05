@@ -135,29 +135,6 @@ body, html {
 		position: absolute;
 		width: 67px;		
 	}
-	.page__truck {
-		background: url('assets/truck_body.png');
-		bottom: 440px;
-		height: 216px;
-		right: 220px;
-		position: absolute;
-		width: 395px;
-		.page__truck__wheel {
-			background: url('assets/truck_wheel.png');
-			height: 60px;
-			width: 60px;
-		}
-		.page__truck__wheel--left {
-			bottom: -22px;
-			left: 29px;
-			position: absolute;
-		}
-		.page__truck__wheel--right {
-			bottom: -22px;
-			right: 65px; 
-			position: absolute;
-		}
-	}
 	.page__contract {
 		background: url('assets/order.png');
 		bottom: 770px;
@@ -168,6 +145,33 @@ body, html {
 		animation-name: contractMove;
   		animation-duration: 2s;	
 	}
+}
+
+.truck {
+	background: url('assets/truck_body.png');
+	height: 216px;
+	position: absolute;
+	width: 395px;
+	.truck__wheel {
+		background: url('assets/truck_wheel.png');
+		height: 60px;
+		width: 60px;
+	}
+	.truck__wheel--left {
+		bottom: -22px;
+		left: 29px;
+		position: absolute;
+	}
+	.truck__wheel--right {
+		bottom: -22px;
+		right: 65px; 
+		position: absolute;
+	}
+}
+
+.truck--page {
+	right: 220px;
+	bottom: 440px;	
 }
 
 .rotateMachineWheelForward {

@@ -6,8 +6,8 @@ class Movement {
 		this.lift = document.getElementsByClassName("page__lift")[0];
 		this.fork = document.getElementsByClassName("page__lift__fork")[0];
 		this.forkliftWheels = document.getElementsByClassName("wheel-rotation");
-		this.truckWheels = document.getElementsByClassName("page__truck__wheel");
-		this.truck = document.getElementsByClassName("page__truck")[0];
+		this.truckWheels = document.getElementsByClassName("truck__wheel");
+		this.truck = document.getElementsByClassName("truck--page")[0];
 		this.page = document.getElementsByClassName("page")[0];
 	}
 	
