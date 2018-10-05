@@ -60,7 +60,7 @@ body, html {
 		top: 228px;
 		width: 187px;
 		.page__track-container__line {
-			animation: trackLineMove infinite 300ms linear;
+			animation: trackLineMove infinite 200ms linear;
 			background: url('assets/track_base.png');
 			height: 8px;
 			position: absolute;
@@ -69,7 +69,7 @@ body, html {
 		}
 		.page__track-container__wheel {
 			animation-name: rotateWheelForward;
-			animation-duration: 2s;
+			animation-duration: 500ms;
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
 			background: url('assets/track_wheel.png');
@@ -190,7 +190,7 @@ body, html {
 
 .rotateMachineWheelForward {
 	animation-name: rotateWheelForward;
-	animation-duration: 3s;
+	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
