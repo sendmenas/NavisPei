@@ -6,8 +6,8 @@ class Movement {
 		this.lift = document.getElementsByClassName("page__lift")[0];
 		this.fork = document.getElementsByClassName("page__lift__fork")[0];
 		this.forkliftWheels = document.getElementsByClassName("wheel-rotation");
-		this.truckWheels = document.getElementsByClassName("truck__wheel");
-		this.truck = document.getElementsByClassName("truck--page")[0];
+		this.truckWheels = document.getElementsByClassName("page__truck__wheel");
+		this.truck = document.getElementsByClassName("page__truck")[0];
 		this.page = document.getElementsByClassName("page")[0];
 	}
 	
@@ -45,7 +45,7 @@ class Movement {
 				if (i == 254) {
 					this.lowerPackage();
 				}
-			}, 10*i);
+			}, 15*i);
 		}		
 	}
 
@@ -137,7 +137,7 @@ class Movement {
 						}, 50*i);
 					};
 				}
-			}, 3*i);
+			}, 5*i);
 		}
 	}
 
@@ -154,7 +154,7 @@ class Movement {
 		for (let i = 1; i < 801; i++) {
 			setTimeout(() => {
 				this.truck.setAttribute("style", "right:" + (truckInitialRightOffset - i) + "px");
-			}, 3*i);
+			}, 5*i);
 		}
 		for (let i = 0; i < this.forkliftWheels.length; i++) {
   			this.forkliftWheels[i].classList.add("rotateMachineWheelBackwards");
