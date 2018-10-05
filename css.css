@@ -62,7 +62,7 @@ body, html {
   width: 187px;
 }
 .page .page__track-container .page__track-container__line {
-  animation: trackLineMove infinite 200ms linear;
+  animation: trackLineMove infinite 300ms linear;
   background: url("assets/track_base.png");
   height: 8px;
   position: absolute;
@@ -71,7 +71,7 @@ body, html {
 }
 .page .page__track-container .page__track-container__wheel {
   animation-name: rotateWheelForward;
-  animation-duration: 500ms;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   background: url("assets/track_wheel.png");
@@ -174,9 +174,19 @@ body, html {
   bottom: 440px;
 }
 
+.second-truck-block {
+  border-radius: 21px 21px 0 0;
+  display: flex;
+  height: 350px;
+  justify-content: center;
+  padding: 88px 0 0px 100px;
+  position: relative;
+  width: 100%;
+}
+
 .rotateMachineWheelForward {
   animation-name: rotateWheelForward;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
